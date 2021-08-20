@@ -1,0 +1,13 @@
+html{
+    font-size: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 50%;
+    height: auto;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+

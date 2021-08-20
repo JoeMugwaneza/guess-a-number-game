@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS A NUMBER GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guessing a Number Game</h1>
+    <p>We have a random number between 1 and 100. See if you can guess the corrent number within 10 attemps. You will be notified if your guess is low or high compared to the randomized number. All in all, you will know if you won or need to start over. </p>
+    <div class="form">
+        <label for="guessField">Enter a Guess:</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="button" value="Submit a Guess" class="guessSubmit">
+    </div>
+    <div class="resultSection">
+        <p class="guesses"></p>
+        <p class="lastGuess"></p>
+        <p class="lowOrHigh"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
