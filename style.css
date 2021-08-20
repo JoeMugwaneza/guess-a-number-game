@@ -11,3 +11,7 @@ body {
     margin: 0 auto;
 }
 
+.lastGuess{
+    color: white;
+    padding: 3px;
+}
