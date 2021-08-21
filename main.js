@@ -25,28 +25,35 @@ function checkGuess(){
     if(guessCount === 1){
         guesses.textContent = "Previous Guesses: ";
     }
-
+    
     guesses.textContent += userGuess + " ";
+   
 
     if(userGuess < randomNumber){
         lastGuess.textContent = "WRONG!"
         lastGuess.style.backgroundColor = 'red';
         lowOrHigh.textContent = "Last guess was too low!";
+        guessField.value = "";
+        guessField.focus();
+
     } else if(userGuess > randomNumber){
         lastGuess.textContent = "WRONG!"
         lastGuess.style.backgroundColor = 'red';
         lowOrHigh.textContent = "Last guess was too high!";
+        guessField.value = "";
+        guessField.focus();
     } else{
         // if userGuess is not less than or greater than random, means you won
         gameWon();
     }
 
     function gameWon(){
-        guessField.disabled = true;
-        guessSubmit.disabled = true;
-        lastGuess.textContent = "Congratulations! You got it right!"
-        lastGuess.style.backgroundColor = 'green';
-        lowOrHigh.textContent = " ";
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            lastGuess.textContent = "Congratulations! You got it right!"
+            lastGuess.style.backgroundColor = 'green';
+            lowOrHigh.textContent = " ";
+            tryAgain()
     }
 
     guessCount++;
@@ -59,5 +66,14 @@ function resetGameOver(){
         guessField.disabled = true;
         guessSubmit.disabled = true;
         lowOrHigh.textContent = " ";
+       
     }
+    tryAgain();
+}
+
+function tryAgain(){
+    resetButton.createElement('button');
+    resetButton.textContent = "Start Again";
+    document.body.append(resetButton)
+    resetButton.addEventListener('click', resetGame);
 }
